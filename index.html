@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EnUcuzSunucu | Hosting Kampanyaları, Kupon Kodları ve Paket Karşılaştırma</title>
+<meta name="description" content="Hosting firmalarının güncel kampanyaları, kupon kodları ve paket karşılaştırmaları tek sayfada.">
+<style>
+:root{
+  --bg:#f5f7fb; --card:#fff; --ink:#14213d; --muted:#5b6b85; --line:#e3e8f2;
+  --brand:#1f6feb; --brand-d:#1550b3; --accent:#ff7a1a; --ok:#16a34a;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.3px}
+.logo span{color:var(--brand)}
+.nav a.link{margin-left:20px;color:var(--muted);font-size:14px}
+.nav a.link:hover{color:var(--ink)}
+.hero{padding:44px 0 28px}
+.hero h1{font-size:clamp(26px,4.5vw,40px);line-height:1.15;margin:0 0 12px;letter-spacing:-.8px}
+.hero p{color:var(--muted);max-width:620px;margin:0 0 20px;font-size:17px}
+.stats{display:flex;gap:10px;flex-wrap:wrap}
+.pill{background:#e8f0fe;color:var(--brand-d);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+h2{font-size:22px;margin:36px 0 14px;letter-spacing:-.3px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.filters button{border:1px solid var(--line);background:#fff;color:var(--muted);padding:8px 14px;border-radius:999px;font-size:14px;cursor:pointer}
+.filters button.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.deal{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.deal .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.firm{font-weight:700}
+.badge{background:#fff3e8;color:#b45309;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px}
+.deal h3{margin:0;font-size:17px}
+.deal p{margin:0;color:var(--muted);font-size:14px}
+.left{font-size:13px;color:var(--muted)}
+.left b{color:#c2410c}
+.code{display:flex;gap:8px;align-items:stretch}
+.code .c{flex:1;border:2px dashed #b8c7e6;border-radius:10px;padding:9px 12px;font-family:ui-monospace,Consolas,monospace;font-weight:700;letter-spacing:1px;background:#f8fafe}
+.btn{border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;font-size:14px}
+.btn.copy{background:var(--brand);color:#fff}
+.btn.copy:hover{background:var(--brand-d)}
+.btn.go{background:var(--accent);color:#fff;text-align:center}
+.btn.go:hover{filter:brightness(.95)}
+.tablebox{background:#fff;border:1px solid var(--line);border-radius:14px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+th{background:#f0f4fb;color:var(--muted);font-weight:600;font-size:13px}
+tr:last-child td{border-bottom:0}
+td.price{font-weight:800;font-size:16px}
+td.price small{font-weight:500;color:var(--muted)}
+.best{background:#eefbf2}
+.tag{display:inline-block;background:var(--ok);color:#fff;font-size:11px;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.note{color:var(--muted);font-size:13px;margin-top:10px}
+footer{margin:48px 0 28px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:#14213d;color:#fff;padding:10px 18px;border-radius:10px;font-size:14px;opacity:0;transition:.25s;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:520px){.nav a.link{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">EnUcuz<span>Sunucu</span></a>
+    <nav><a class="link" href="#kampanyalar">Kampanyalar</a><a class="link" href="#karsilastir">Karşılaştırma</a><a class="link" href="#sss">Nasıl çalışır</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Hosting kampanyaları ve kupon kodları tek sayfada</h1>
+    <p>Firmaların güncel indirimlerini, kupon kodlarını ve paketlerini yan yana karşılaştırın, size uygun olanı birkaç dakikada seçin.</p>
+    <div class="stats"><span class="pill">Güncel kampanyalar</span><span class="pill">Tek tıkla kupon kopyalama</span><span class="pill">Paket karşılaştırma</span></div>
+  </section>
+
+  <section id="kampanyalar">
+    <h2>Aktif kampanyalar ve kuponlar</h2>
+    <div class="filters" id="filters">
+      <button class="on" data-f="all">Tümü</button>
+      <button data-f="hosting">Paylaşımlı hosting</button>
+      <button data-f="vps">VPS</button>
+      <button data-f="domain">Alan adı</button>
+    </div>
+    <div class="grid" id="deals"></div>
+    <p class="note">Örnek veridir: firma adları, kodlar ve fiyatlar yer tutucudur. Gerçek veriler yönetim panelinden girilir.</p>
+  </section>
+
+  <section id="karsilastir">
+    <h2>Paket karşılaştırma</h2>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Firma / Paket</th><th>Disk</th><th>Trafik</th><th>Ücretsiz SSL</th><th>Aylık fiyat</th><th></th></tr></thead>
+        <tbody>
+          <tr class="best"><td><b>Örnek Hosting A</b> · Başlangıç <span class="tag">En ucuz</span></td><td>10 GB NVMe</td><td>Sınırsız</td><td>Var</td><td class="price">39 ₺<small> /ay</small></td><td><a class="btn go" href="#">Siteye git</a></td></tr>
+          <tr><td><b>Örnek Hosting B</b> · Standart</td><td>25 GB NVMe</td><td>Sınırsız</td><td>Var</td><td class="price">59 ₺<small> /ay</small></td><td><a class="btn go" href="#">Siteye git</a></td></tr>
+          <tr><td><b>Örnek Hosting C</b> · Pro</td><td>50 GB SSD</td><td>Sınırsız</td><td>Var</td><td class="price">79 ₺<small> /ay</small></td><td><a class="btn go" href="#">Siteye git</a></td></tr>
+          <tr><td><b>Örnek VPS D</b> · 2 vCPU / 4 GB</td><td>60 GB NVMe</td><td>2 TB</td><td>—</td><td class="price">249 ₺<small> /ay</small></td><td><a class="btn go" href="#">Siteye git</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Linkler, ilgili firmanın affiliate adresine yönlendirilir. Tıklamalar panelde sayılır.</p>
+  </section>
+
+  <section id="sss">
+    <h2>Nasıl çalışır?</h2>
+    <div class="grid">
+      <div class="deal"><h3>1. Kampanyayı seçin</h3><p>Kategoriye göre filtreleyin, kalan süreyi görün.</p></div>
+      <div class="deal"><h3>2. Kuponu kopyalayın</h3><p>Tek tıkla kodu kopyalayın, firma sitesinde ödeme sırasında girin.</p></div>
+      <div class="deal"><h3>3. Paketleri kıyaslayın</h3><p>Disk, trafik ve fiyatı tabloda yan yana karşılaştırın.</p></div>
+    </div>
+  </section>
+
+  <footer>© EnUcuzSunucu · Bu sayfadaki bağlantılar affiliate bağlantısı olabilir; sizin için fiyat değişmez.</footer>
+</main>
+
+<div class="toast" id="toast">Kupon kodu kopyalandı</div>
+
+<script>
+// Örnek veri: gerçek sitede yönetim panelinden gelir.
+// "bitis" tarihi geçince kampanya otomatik gizlenir.
+function gunSonra(n){var d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)}
+var deals=[
+ {firma:"Örnek Hosting A",tur:"hosting",baslik:"İlk yıl %60 indirim",ack:"Tüm paylaşımlı hosting paketlerinde geçerli.",kod:"ORNEK60",bitis:gunSonra(9),rozet:"%60"},
+ {firma:"Örnek Hosting B",tur:"hosting",baslik:"2 yıllık alımda +3 ay hediye",ack:"24 aylık paketlerde otomatik tanımlanır.",kod:"HEDIYE3",bitis:gunSonra(21),rozet:"+3 ay"},
+ {firma:"Örnek VPS D",tur:"vps",baslik:"VPS paketlerinde %30 indirim",ack:"İlk 3 ay için geçerli.",kod:"VPS30",bitis:gunSonra(5),rozet:"%30"},
+ {firma:"Örnek Alan Adı E",tur:"domain",baslik:".com.tr alan adı 99 ₺",ack:"İlk yıl kayıt kampanyası.",kod:"COMTR99",bitis:gunSonra(14),rozet:"99 ₺"},
+ {firma:"Örnek Hosting C",tur:"hosting",baslik:"Yıllık alımda %45 indirim",ack:"Pro ve üzeri paketlerde geçerli.",kod:"PRO45",bitis:gunSonra(3),rozet:"%45"},
+ {firma:"Örnek Eski Kampanya",tur:"hosting",baslik:"Süresi dolmuş kampanya",ack:"Bu kart görünmez.",kod:"ESKI",bitis:gunSonra(-2),rozet:"%99"}
+];
+var box=document.getElementById("deals"), cur="all";
+function kalan(b){var g=Math.ceil((new Date(b+"T23:59:59")-new Date())/864e5);return g<=1?"Son gün":g+" gün kaldı"}
+function render(){
+  box.innerHTML="";
+  deals.filter(function(d){return new Date(d.bitis+"T23:59:59")>=new Date()&&(cur==="all"||d.tur===cur)})
+   .sort(function(a,b){return a.bitis<b.bitis?-1:1})
+   .forEach(function(d){
+     var el=document.createElement("div");el.className="deal";
+     el.innerHTML='<div class="top"><span class="firm"></span><span class="badge"></span></div><h3></h3><p></p><div class="left"><b></b></div><div class="code"><div class="c"></div><button class="btn copy">Kopyala</button></div><a class="btn go" href="#">Kampanyaya git</a>';
+     el.querySelector(".firm").textContent=d.firma;
+     el.querySelector(".badge").textContent=d.rozet;
+     el.querySelector("h3").textContent=d.baslik;
+     el.querySelector("p").textContent=d.ack;
+     el.querySelector(".left b").textContent=kalan(d.bitis);
+     el.querySelector(".c").textContent=d.kod;
+     el.querySelector(".copy").onclick=function(){
+       var t=d.kod;
+       (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).catch(function(){
+         var i=document.createElement("input");i.value=t;document.body.appendChild(i);i.select();document.execCommand("copy");i.remove();
+       });
+       var ts=document.getElementById("toast");ts.textContent="Kupon kodu kopyalandı: "+t;ts.classList.add("show");setTimeout(function(){ts.classList.remove("show")},1800);
+     };
+     box.appendChild(el);
+   });
+}
+document.getElementById("filters").addEventListener("click",function(e){
+  var b=e.target.closest("button");if(!b)return;
+  cur=b.dataset.f;[].forEach.call(this.children,function(x){x.classList.toggle("on",x===b)});render();
+});
+render();
+</script>
+</body>
+</html>
